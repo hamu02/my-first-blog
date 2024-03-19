@@ -1,0 +1,17 @@
+h1 a {
+
+    color:darkblue;
+    font-family: 'Lobster';
+}
+h2 a {
+
+    color:cornflowerblue;
+    font-family: 'Lobster';
+}
+p {
+    color:lightblue;
+    font-family: 'Nanaum Pen Script';
+}
+body {
+    padding-left: 35px;
+}
