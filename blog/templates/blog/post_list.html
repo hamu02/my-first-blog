@@ -1,9 +1,16 @@
+{% load static %}
 <html>
 <head>
     <title>Diango Girls blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https: //fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div>
+    <div class="page-header">
         <h1><a href="https://github.com/hamu02">Django Girls Blog</a></h1>
     </div>
 
@@ -20,7 +27,7 @@
         <p> こんにちは！よろしくお願いします！</p>
     </div> -->
     {% for post in posts %}
-        <div>
+        <div class="post">
             <br>
             <p>published: {{ post.published_date }}</p>
             <h2><a href="">{{ post.title }}</a></h2>

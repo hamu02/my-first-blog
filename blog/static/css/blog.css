@@ -10,8 +10,12 @@ h2 a {
 }
 p {
     color:lightblue;
-    font-family: 'Nanaum Pen Script';
+    font-family: 'Nanum Pen Script';
 }
 body {
     padding-left: 35px;
+}
+.page-header {
+    background-color: white;
+    margin-top: 3;
 }
