@@ -1,38 +1,14 @@
-{% load static %}
-<html>
-<head>
-    <title>Diango Girls blog</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link href="https: //fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+{% extends 'blog/base.html' %}
 
-</head>
-<body>
-    <div class="page-header">
-        <h1><a href="https://github.com/hamu02">Django Girls Blog</a></h1>
-    </div>
-
-    <!-- <div>
-        <p>published: 23.02.2024</p>
-        <h2><a href=””>My first post</a></h2>
-        <p>こんにちは！よろしくお願いします</p>
-    </div>
-
-    <div>
-        <br>
-        <p>公開日: 2024/02/23, 17:52</p>
-        <h2><a href="">2番目の投稿</a></h2>
-        <p> こんにちは！よろしくお願いします！</p>
-    </div> -->
+{% block content %}
     {% for post in posts %}
         <div class="post">
-            <br>
+        <div class="date">
+        <br>
             <p>published: {{ post.published_date }}</p>
-            <h2><a href="">{{ post.title }}</a></h2>
+            </div>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
