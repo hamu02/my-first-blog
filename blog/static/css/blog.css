@@ -8,6 +8,10 @@ h2 a {
     color:cornflowerblue;
     font-family: 'Lobster';
 }
+.subtitle {
+    color: cornflowerblue;
+    font-family: 'Lobster';
+}
 p {
     color:lightblue;
     font-family: 'Nanum Pen Script';
@@ -18,4 +22,31 @@ body {
 .page-header {
     background-color: white;
     margin-top: 3;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+.date {
+    color: #828282;
+}
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+    background-color: azure;
 }
